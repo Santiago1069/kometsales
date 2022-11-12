@@ -1,16 +1,9 @@
-package com.prueba.kometsales.model;
+package com.prueba.kometsales.controller;
 
-public class Flower {
-
-    private String id;
-    private String name;
-    private double price;
-
-    public Flower(String id, String name, double price) {
-        this.id = id;
-        this.name = name;
-        this.price = price;
-    }
+public class FlowerResponse {
+    String id;
+    String name;
+    double price;
 
     public String getId() {
         return id;
@@ -35,6 +28,4 @@ public class Flower {
     public void setPrice(double price) {
         this.price = price;
     }
-
-
 }

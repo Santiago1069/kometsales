@@ -26,7 +26,7 @@ public class FlowerController {
     public List<FlowerResponse> getKometFlowers() {
        List<FlowerResponse> response = new ArrayList<>();
         for (Flower flower: flowers) {
-            FlowerResponse flowerResponse = mapFlowerToFlowerResponse(flower.getId(), flower.getPrice(), flower.getName().concat("-kometsales"));
+            FlowerResponse flowerResponse = mapFlowerToFlowerResponse(null, flower.getPrice(), flower.getName().concat("-kometsales"));
             response.add(flowerResponse);
         }
 
@@ -63,7 +63,7 @@ public class FlowerController {
 
     }
 
-    @DeleteMapping("/deleteflower/{id}")
+    @DeleteMapping("/{id}")
     public void deleteFlower(@PathVariable String id){
         for (int i = 0; i < flowers.size(); i++) {
             if (flowers.get(i).getId().equals(id)){
